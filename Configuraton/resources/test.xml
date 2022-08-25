@@ -1,6 +1,0 @@
-<configuration>
-    <log>
-        <path>C:\Temp</path>
-        <level>WARN</level>
-    </log>
-</configuration>
