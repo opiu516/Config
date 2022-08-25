@@ -16,7 +16,9 @@ public class ConfigurationFactoryFactory {
 		CommandLine cmd = new DefaultParser().parse(options, args);
 		ConfigurationFactory returnValue;
 		if(cmd.hasOption("c")) {
-			returnValue = createConfigurationFactoryFromString(cmd.getOptionValue("c"));
+			//REVIEW
+			//returnValue = createConfigurationFactoryFromString(cmd.getOptionValue("c"));
+			returnValue = createConfigurationFactoryFromString(cmd);
 		}
 		else if(cmd.hasOption("ll") && cmd.hasOption("lp")){
 			returnValue = new CLIConfigurationFactory();
@@ -43,8 +45,28 @@ public class ConfigurationFactoryFactory {
 		if( ! ConfigurationFactory.class.isAssignableFrom(factory)) {
 			throw new IllegalArgumentException("Class " + className + " exists but does not implement ConfigurationFactory");
 		}
+
+		factory.getConstructor(	int.class, double.class )
+		)
+
+
 		@SuppressWarnings("deprecation")
 		ConfigurationFactory k = (ConfigurationFactory) factory.newInstance();
 		return k;
 	}
+
+	//REVIEW New version, which uses a constructor with parameters
+	public static ConfigurationFactory createConfigurationFactoryFromString(CommandLine cmd) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		String fileFormat = getFileFormat(cmd.getOptionValue("c"));
+		if(fileFormat.equals("Cli")) {
+			throw new IllegalArgumentException("Cli is not a file extension");
+		}
+		String className = "com.Configuration." +fileFormat + "ConfigurationFactory";
+		Class<?> factory = Class.forName(className);
+		if( ! ConfigurationFactory.class.isAssignableFrom(factory)) {
+			throw new IllegalArgumentException("Class " + className + " exists but does not implement ConfigurationFactory");
+		}
+
+		return factory.getConstructor(CommandLine.class).newInstance(cmd);
+	}	
 }
