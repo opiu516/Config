@@ -1,10 +1,15 @@
 package com.Configuration;
 
+import org.apache.commons.cli.CommandLine;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.INIConfiguration;
 
 @SuppressWarnings("deprecation")
 public class IniConfigurationFactory extends ConfigurationFactory{
+
+	public IniConfigurationFactory(CommandLine cmd) {
+		super(cmd);
+	}
 
 	@Override
 	public Configuration create() {

@@ -1,10 +1,12 @@
 package com.Configuration;
 
+import org.apache.commons.cli.CommandLine;
+
 public class CLIConfigurationFactory extends ConfigurationFactory{
 
-	//REVIEW Added an empty constructor
-	public CLIConfigurationFactory(CommandLine cmd) {
 
+	public CLIConfigurationFactory(CommandLine cmd) {
+		super(cmd);
 	}
 
 	@Override

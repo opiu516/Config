@@ -1,10 +1,15 @@
 package com.Configuration;
 
+import org.apache.commons.cli.CommandLine;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.XMLConfiguration;
 
 public class XmlConfigurationFactory extends ConfigurationFactory{
 
+
+	public XmlConfigurationFactory(CommandLine cmd) {
+		super(cmd);
+	}
 
 	@Override
 	public Configuration create() {

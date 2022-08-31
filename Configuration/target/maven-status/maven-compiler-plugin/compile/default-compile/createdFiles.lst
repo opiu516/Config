@@ -1,0 +1,6 @@
+com\Configuration\CLIConfigurationFactory.class
+com\Configuration\ConfigurationFactoryFactory.class
+com\Configuration\IniConfigurationFactory.class
+com\Configuration\Configuration.class
+com\Configuration\ConfigurationFactory.class
+com\Configuration\XmlConfigurationFactory.class

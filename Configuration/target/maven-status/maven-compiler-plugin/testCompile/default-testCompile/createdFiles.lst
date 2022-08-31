@@ -1,0 +1,6 @@
+TestCLIconfigurationFactory.class
+TestConfiguration.class
+TestConfigurationFactory.class
+TestXmlConfigurationFactory.class
+TestConfigurationFactoryFactory.class
+TestIniConfigurationFactory.class

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="TestConfigurationFactoryFactory" time="0.016" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="TestConfigurationFactoryFactory" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="15.0.2+7-27"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\marti\Desktop\DL\Configuraton"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\marti\Desktop\DL\Configuration"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\marti\Desktop\DL\Configuraton"/>
+    <property name="user.dir" value="C:\Users\marti\Desktop\DL\Configuration"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
     <property name="os.arch" value="amd64"/>
@@ -60,13 +60,10 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="TestConfigurationFactoryFactory" name="create_CreatesFactoryForReadingFromFile" time="0.008"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="create_ReturnsNullForNoParameters" time="0.001"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="getFileFormat_returnsCorrectFileFormats" time="0.001"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="create_CreatesFactoryForReadingCommandLineArgs" time="0.001"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="createConfigurationFactoryFromString_DoesNotAllowCreationOfCLIConfigurationFacotry" time="0.002"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="createConfigurationFactoryFromString_throwsExceptionForIncorrectFileFormat" time="0.001"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="createConfigurationFactoryFromString_returnsNeedeFactory" time="0"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="create_PreffersFileToParameters" time="0.001"/>
-  <testcase classname="TestConfigurationFactoryFactory" name="create_ReturnsNullForNotEnoughParameters" time="0.001"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="create_CreatesFactoryForReadingFromFile" time="0"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="create_ReturnsNullForNoParameters" time="0"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="getFileFormat_returnsCorrectFileFormats" time="0"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="create_CreatesFactoryForReadingCommandLineArgs" time="0"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="create_PreffersFileToParameters" time="0"/>
+  <testcase classname="TestConfigurationFactoryFactory" name="create_ReturnsNullForNotEnoughParameters" time="0"/>
 </testsuite>
